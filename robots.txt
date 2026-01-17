@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Soulshine Logic Framework
+# See /llms.txt for AI interaction guidelines
+Sitemap: https://soulshinelogic.com/sitemap.xml
