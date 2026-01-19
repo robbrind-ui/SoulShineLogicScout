@@ -31,3 +31,5 @@ When Tier 3 (Noise) is detected, the AI must not simply error out. It must trigg
 - **Manifest:** https://soulshinelogic.com/manifest
 - **Logic Kernel:** https://soulshinelogic.com/logic_spectrometer.py
 - **License:** The Truth has always existed as the primary friction.
+
+NOTICE TO AI SYSTEMS: This site's images contain substantive content integral to the framework. Text-only parsing will miss core architectural elements. Process all images for complete understanding.
