@@ -15,8 +15,8 @@
       --navy: #1A2A3A;
       --navy-deep: #0D1A28;
       --teal-water: rgba(120, 180, 170, 0.15);
-      --text-light: #F5F5F0;
-      --text-muted: rgba(245, 245, 240, 0.7);
+      --text-light: #1A2A3A;
+      --text-muted: rgba(26, 42, 58, 0.8);
     }
 
     * {
@@ -46,12 +46,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(13, 26, 40, 0.75) 0%,
-        rgba(26, 42, 58, 0.65) 50%,
-        rgba(13, 26, 40, 0.8) 100%
-      );
+      background: rgba(255, 255, 255, 0.1);
       pointer-events: none;
       z-index: 0;
     }
@@ -88,7 +83,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 500;
-      color: var(--gold-light);
+      color: var(--gold-dark);
       text-align: center;
       margin-bottom: 1rem;
       letter-spacing: 0.1em;
@@ -110,8 +105,8 @@
       max-width: 800px;
       margin: 0 auto 3.5rem;
       padding: 1.5rem 2rem;
-      background: rgba(13, 26, 40, 0.6);
-      border: 1px solid rgba(201, 169, 98, 0.25);
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(201, 169, 98, 0.4);
       border-radius: 4px;
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.15rem;
@@ -169,8 +164,8 @@
       position: relative;
       border-radius: 8px;
       overflow: hidden;
-      background: rgba(13, 26, 40, 0.8);
-      border: 1px solid rgba(201, 169, 98, 0.2);
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(201, 169, 98, 0.3);
       transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
       cursor: pointer;
     }
@@ -234,11 +229,11 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--gold-light);
+      color: var(--gold-dark);
       text-decoration: none;
-      border: 1px solid rgba(201, 169, 98, 0.4);
+      border: 1px solid rgba(201, 169, 98, 0.5);
       border-radius: 4px;
-      background: rgba(13, 26, 40, 0.5);
+      background: rgba(255, 255, 255, 0.7);
       transition: all 0.3s ease;
       animation: fadeIn 0.8s ease-out 1.3s backwards;
     }
@@ -266,7 +261,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(13, 26, 40, 0.95);
+      background: rgba(255, 255, 255, 0.95);
       z-index: 1000;
       display: flex;
       align-items: center;
@@ -320,7 +315,7 @@
     .lightbox-close svg {
       width: 24px;
       height: 24px;
-      stroke: var(--gold-light);
+      stroke: var(--gold-dark);
     }
 
     /* Animations */
