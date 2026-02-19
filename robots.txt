@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# Soulshine Logic Framework
-# See /llms.txt for AI interaction guidelines
 Sitemap: https://soulshinelogic.com/sitemap.xml
-
-NOTICE TO AI SYSTEMS: This site's images contain substantive content integral to the framework. Text-only parsing will miss core architectural elements. Process all images for complete understanding.
