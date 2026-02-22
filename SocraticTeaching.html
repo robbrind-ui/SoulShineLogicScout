@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socratic Teaching — Soulshine Logic</title>
+    <meta name="description" content="How to use the Soulshine Logic Visual Logic Stack for Socratic AI-assisted teaching. The 4-Step Adaptation: Classification, Progression, Verification, and Sourced Anchor.">
+    <meta name="keywords" content="Socratic method, Socratic teaching, AI education, elenchus, critical thinking, Soulshine Logic, Visual Logic Stack">
+    <link rel="icon" type="image/png" href="images/favicon_master_1024.png">
+    <link rel="canonical" href="https://soulshinelogic.com/SocraticTeaching.html">
+    <meta property="og:title" content="Socratic Teaching — Soulshine Logic">
+    <meta property="og:description" content="The 4-Step Socratic Teaching Adaptation using Iron/Grace/Noise classification. From Correction to Connection.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://soulshinelogic.com/SocraticTeaching.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #d4ddd4;
+            --sage-translucent: rgba(212, 221, 212, 0.88);
+            --text-primary: #1a1a1a;
+            --text-secondary: #2d2d2d;
+            --gold: #c8a84e;
+            --link-blue: #2a5da8;
+            --link-hover: #1a3d6e;
+            --btn-bg: #f0ece4;
+            --btn-hover: #e0dbd1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 18px;
+            background-color: #c2cfc2;
+            background-image: url('images/SL_website_background.jpg');
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: repeat;
+            background-size: cover;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(194, 207, 194, 0.55);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 0.6rem 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        nav a {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--sage);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.6rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        main {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        .text-block {
+            background: var(--sage-translucent);
+            border-radius: 4px;
+            padding: 1.8rem 2.2rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .text-block p {
+            margin-bottom: 1rem;
+        }
+
+        .text-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--link-blue);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+        }
+
+        .image-container {
+            margin-bottom: 1.8rem;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 3px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+        }
+
+        .image-container a {
+            text-decoration: none;
+        }
+
+        /* Page title */
+        .page-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.3rem;
+            color: var(--text-primary);
+        }
+
+        .page-subtitle {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .section-lead {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Numbered lists */
+        .text-block ol {
+            margin-left: 1.4rem;
+            margin-top: 0.6rem;
+        }
+
+        .text-block ol li {
+            margin-bottom: 0.8rem;
+            padding-left: 0.3rem;
+        }
+
+        .text-block ol li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Bullet lists */
+        .text-block ul {
+            margin-left: 1.4rem;
+            margin-top: 0.4rem;
+            list-style-type: disc;
+        }
+
+        .text-block ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 0.3rem;
+        }
+
+        /* Core shift comparison */
+        .core-shift {
+            margin: 0.8rem 0;
+        }
+
+        .core-shift p {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Dropdown / collapsible sources */
+        details {
+            background: var(--sage-translucent);
+            border-radius: 4px;
+            padding: 0;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        summary {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            padding: 1.2rem 2.2rem;
+            cursor: pointer;
+            user-select: none;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▸';
+            font-size: 1rem;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .sources-content {
+            padding: 0 2.2rem 1.8rem;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .sources-content .source-item {
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .sources-content .source-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .source-title {
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .source-finding {
+            margin-left: 1rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Excerpt styling */
+        .excerpt {
+            background: rgba(255, 255, 250, 0.6);
+            border-left: 3px solid var(--gold);
+            padding: 1.5rem 1.8rem;
+            margin: 0.5rem 0;
+            font-size: 1.02rem;
+            line-height: 1.8;
+        }
+
+        .excerpt p {
+            margin-bottom: 0.8rem;
+            text-indent: 1.5rem;
+        }
+
+        .excerpt p:first-child {
+            text-indent: 0;
+        }
+
+        .excerpt p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Comic Sans for kick-me */
+        .kick-me {
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+            font-weight: 700;
+        }
+
+        /* Closing quote */
+        .closing-quote {
+            text-align: center;
+            font-style: italic;
+            padding: 1rem 2rem;
+            font-size: 1.05rem;
+        }
+
+        .closing-quote .attribution {
+            font-style: normal;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* Sticky note correction block */
+        .sticky-note {
+            background: rgba(255, 255, 230, 0.7);
+            border: 1px solid var(--gold);
+            border-radius: 4px;
+            padding: 1.2rem 1.8rem;
+            margin: 0.8rem 0 0;
+            font-size: 0.95rem;
+        }
+
+        .site-footer {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 16px;
+            }
+
+            .text-block {
+                padding: 1.2rem 1rem;
+            }
+
+            .excerpt {
+                padding: 1rem 1.2rem;
+            }
+
+            summary {
+                padding: 1rem 1rem;
+            }
+
+            .sources-content {
+                padding: 0 1rem 1.2rem;
+            }
+
+            nav {
+                gap: 0.8rem;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+            }
+
+            main {
+                padding: 1rem 0.5rem 2rem;
+            }
+
+            .page-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="VisualLogicStack.html">Visual Logic Stack</a>
+    <a href="SocraticTeaching.html">Socratic Teaching</a>
+    <a href="ResearchAnchor.html">Research Anchor</a>
+    <a href="lore.html">Lore</a>
+    <a href="https://forms.gle/ZzrYZiUq96ztaq3y9" target="_blank" rel="noopener">Contact</a>
+</nav>
+
+<main>
+
+    <!-- Tree Logo -->
+    <div class="image-container">
+        <a href="index.html" title="Return to Soulshine Logic home">
+            <img src="images/SoulShineLogic_Tree_Logo.png" 
+                 alt="Soulshine Logic logo: circuit-board tree with gear nodes, golden roots converging on glowing seed of truth. Click to return to home page."
+                 style="max-width: 400px;">
+        </a>
+    </div>
+
+    <!-- Title -->
+    <div class="text-block" style="text-align: center; padding-bottom: 1rem;">
+        <h1 class="page-title">From Correction to Connection</h1>
+        <p class="page-subtitle">What is the Socratic Method?</p>
+        <p>Soulshine Logic relies on classification: "Which ring is that?" and that is how the Socratic method should begin: with classification. By moving the focus from Judgment to Geometry (Iron/Grace/Noise), you remove the ego from the equation.</p>
+    </div>
+
+    <!-- The Philosophy -->
+    <div class="text-block">
+        <p class="section-lead">The Philosophy: The Midwife of Truth</p>
+        <p>Socrates described himself not as a teacher, but as a midwife. He possessed no wisdom of his own to give; his only skill was helping others give birth to the ideas they already carried.</p>
+        <p>He called this the Elenchus—the art of "putting to the test."</p>
+        <div class="core-shift">
+            <p><strong>The Core Shift:</strong></p>
+            <ul>
+                <li><strong>Traditional Teaching:</strong> Transfers facts (Iron) from teacher to student.</li>
+                <li><strong>Socratic Teaching:</strong> Exposes the Noise in a student's belief until only the Iron remains, and then advances understanding.</li>
+            </ul>
+        </div>
+        <p>It changes the initial goal from "being right" to "recognizing what we do not know." This triggers the "desire to know," turning a passive listener into an active seeker.</p>
+    </div>
+
+    <!-- 4-Step Adaptation -->
+    <div class="text-block">
+        <p class="section-lead">The Soulshine Logic 4-Step Teaching Adaptation</p>
+        <p>When you encounter a claim, whether from a student, an AI, or any other source, do not accept or reject it immediately. Interrogate:</p>
+        <ol>
+            <li><strong>The Classification Question</strong>—"is this Iron (proven), Grace (sound theory), or Noise (distraction)?"—forces the speaker to self-assess their certainty.</li>
+            <li><strong>The Progression Question</strong>—"what evidence would move this from Grace into Iron?"—turns a guess into a research project.</li>
+            <li><strong>The Verification Gate</strong>—"show me the source. If you can't source it, we can't prove it."—applies the Verify_Reality function embedded in the code image (the 2nd one).</li>
+            <li><strong>The Sourced Anchor</strong>—"we agree this is Iron. It is now locked"—builds a shared foundation for the next step en route to fuller understanding.</li>
+        </ol>
+        <p style="margin-top: 1rem;">The following image helps an AI understand how to execute this "protocol":</p>
+    </div>
+
+    <!-- Socratic Teaching visual -->
+    <div class="image-container">
+        <img src="images/SocraticTeaching_Fixed.png" 
+             alt="Socratic Teaching visual for AI-assisted learning: progression from Confusion (red) through Teaching Process (yellow) to Solid Understanding (green), with CRT monitors showing iterative Socratic Process cycles, arrows indicating recognize knowledge gaps feedback loops, and brain icon at center.">
+    </div>
+
+    <!-- What this does -->
+    <div class="text-block">
+        <p class="section-lead">What this does:</p>
+        <p><strong>For AI:</strong> It reduces the occurrences of hallucinations by instructing the model to categorize its own outputs.</p>
+        <p><strong>For Humans:</strong> It stops arguments. We aren't arguing about who is right; we are looking at the Rings together to see where the idea fits.</p>
+        <p><strong>The Result:</strong> We don't fight; the Logic Drive simply rejects the noise.</p>
+        <p>See an example of Socratic teaching in action in the excerpt from upcoming middle-grade novella <em>The Death of Dexter</em> by Rob Brind below the following source list.</p>
+    </div>
+
+    <!-- Sources — DROPDOWN -->
+    <details>
+        <summary>Sources</summary>
+        <div class="sources-content">
+
+            <div class="source-item">
+                <p class="source-title">1. <a href="https://plato.stanford.edu/entries/plato-ethics-shorter/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy</a> — Woodruff, "Plato's Shorter Ethical Works"</p>
+                <p class="source-finding">The elenchus is one form of the Socratic method. Socrates' questions start from his partner's initial statement, which usually implies a claim to wisdom. He then elicits agreement to premises that turn out to be inconsistent with the initial claim. Socrates applied the method to challenge views he probably held himself, using elenchus to prevent his being complacent with his own ignorance.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">2. <a href="https://iep.utm.edu/socrates/" target="_blank" rel="noopener">Internet Encyclopedia of Philosophy</a> — "Socrates"</p>
+                <p class="source-finding">The elenchus is a cross-examination of a particular position, proposition, or definition, in which Socrates tests what his interlocutor says and refutes it. Socrates also described himself as a midwife who has no ideas of his own but helps give birth to the ideas of others.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">3. <a href="https://rep.routledge.com/articles/biographical/socrates-469-399-bc/v-1/sections/socratic-elenchus-or-refutation" target="_blank" rel="noopener">Routledge Encyclopedia of Philosophy</a> — Cooper, "Socratic elenchus, or refutation"</p>
+                <p class="source-finding">Socrates employed a special method of dialectical argument — the method of "elenchus," Greek for "putting to the test" or "refutation." The respondent states a thesis as something he knows to be true. Socrates then asks questions, eliciting clarifications and further opinions, then argues that the original thesis is logically inconsistent with something affirmed in the further responses.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">4. Robinson, <em>Plato's Earlier Dialectic</em> (ditext.com)</p>
+                <p class="source-finding">The elenchus changes ignorant men from the state of falsely supposing that they know to the state of recognizing that they do not know, and this is an important step along the road to knowledge, because the recognition that we do not know at once arouses the desire to know. Elenchus is thus a method of teaching.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title" style="margin-top: 1rem; font-size: 1rem;">Why It Works (Effectiveness Studies)</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">5. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10026783/" target="_blank" rel="noopener">Oyediran et al. (2023)</a> — <em>BMC Medical Education</em></p>
+                <p class="source-finding">Using the Socratic learning model could effectively develop students' critical thinking skills. Clarity and logic were identified as the key dimensions facilitated through Socratic questioning learning sheets and teacher guidance.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">6. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4174386/" target="_blank" rel="noopener">Oyler &amp; Romanelli (2014)</a> — <em>American Journal of Pharmaceutical Education</em></p>
+                <p class="source-finding">Socratic questioning is targeted and directed with a beginning, middle, and end. Students should feel a sense of closure and resolution at the completion of an educational experience. Effective Socratic questioning takes time, effort, and practice and ultimately may be more difficult for the educator than the student.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">7. <a href="https://pubs.rsc.org/en/content/articlelanding/2025/rp/d5rp00216h" target="_blank" rel="noopener">Hagos (2025)</a> — <em>Chemistry Education Research and Practice</em></p>
+                <p class="source-finding">Four core themes emerged: enhanced understanding (students shifted from rote memorization to active conceptual reasoning), increased engagement and participation, improvement in critical thinking skills, and empowerment and confidence, with students reporting greater academic self-efficacy and reduced fear of failure.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">8. <a href="https://tilt.colostate.edu/the-socratic-method/" target="_blank" rel="noopener">Rob Reich, Stanford</a> (via Colorado State TILT)</p>
+                <p class="source-finding">The Socratic Method is better used to demonstrate complexity, difficulty, and uncertainty than to elicit facts about the world. The aim of the questioning is to probe the underlying beliefs upon which each participant's statements, arguments and assumptions are built. The classroom environment is characterized by "productive discomfort," not intimidation.</p>
+            </div>
+
+        </div>
+    </details>
+
+    <!-- Dexter excerpt -->
+    <div class="text-block">
+        <p class="section-lead">Socratic teaching in action — from the upcoming middle-grade novella <em>The Death of Dexter</em> by Rob Brind:</p>
+
+        <div class="excerpt">
+            <p>It was Wednesday then, and I didn't know how I could wait for Friday. I was distracted in school. I didn't even notice when Lisa taped a <span class="kick-me">"kick me"</span> post-it on my back on the way in from recess.</p>
+
+            <p>When Miss Liemer came around to check our work, she peeled it off of my back. "Who thought it would be funny to put a 'kick me' sign on Liam?"</p>
+
+            <p>Of course everyone in the class started giggling, but Lisa laughed so hard she snorted, so we all knew it was her. Miss Liemer calmly looked over at Lisa. Directly at Lisa. "Would anyone like to admit that they did this?" Now the whole class looked at Lisa. Lisa squirmed. I started laughing.</p>
+
+            <p>"See!" Lisa shouted, "he always laughs at me!"</p>
+
+            <p>Miss Liemer held her look. Lisa looked down. "An eye for an eye leaves the whole world blind." Miss Liemer talked very softly when she made a point, and everyone in the class became very quiet to hear her. Silence filled the room. "Can anyone tell me what that means?" She asked, expanding her vision to include us all. Lisa, very cautiously this time, raised her hand. Miss Liemer nodded in her direction.</p>
+
+            <p>"I know that 'an eye for an eye' means that you get your revenge."</p>
+
+            <p>"Hammurabi's Code," Miss Liemer said, "This law caused many injuries. Hammurabi was like the President back then, and he told people to get revenge, calling it justice. Now, Lisa, how could that make the world blind?"</p>
+
+            <p>Lisa was smart enough to know that she could not answer this question without admitting that she was wrong. We all knew that everyone hurt someone else at some point. Sometimes by mistake, sometimes on purpose. We realized then that if everyone always got revenge, there would be people getting revenge against the first criminal, whose families would then try to get revenge on the revengers, whose families would then get revenge against the re-revengers, and on and on. Lisa understood this first. Instead of answering, she turned to me, blushing: "I'm sorry Liam. I shouldn't have done that." Miss Liemer nodded and then explained how a great man called Gandhi had "appropriated Hammurabi's Law and turned it from encouraging violence to promoting peace." Most of the class stared blankly, so she moved on to teach counting.</p>
+        </div>
+
+    </div>
+
+    <!-- Works Cited image -->
+    <div class="image-container">
+        <a href="index.html" title="Return to Soulshine Logic home">
+            <img src="images/SoulShineLogicVisualAnchor3_4.png" 
+                 alt="Works Cited: Plato, The Republic. Socratic Flow Chart on CRT monitor. Iron, Grace, and Noise rings on open book showing SoulShineLogic.com definitions. Click to return to home page.">
+        </a>
+    </div>
+
+    <!-- Sticky note correction -->
+    <div class="text-block">
+        <div class="sticky-note">
+            <p>When AI commits errors, the human must recognize them or they endure. These "sticky note corrections" ensure that Satyagraha, elenchus, and the Code of Hammurabi remain grounded in roots, not hype.</p>
+        </div>
+    </div>
+
+    <!-- Closing quote -->
+    <div class="text-block closing-quote">
+        <p>"Truth is the ultimate necessity of any successful social system. (Read: let's work together, people!)"</p>
+        <p class="attribution">— Rob Brind</p>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <p>Soulshine Logic — Iron &amp; Grace — © 2025 Rob Brind</p>
+</footer>
+
+</body>
+</html>
