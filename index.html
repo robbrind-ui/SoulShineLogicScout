@@ -47,14 +47,22 @@
             line-height: 1.7;
             font-size: 18px;
             background-color: #c2cfc2;
-            background-image: url('images/DorianGreyLooms.jpg');
-            background-attachment: fixed;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
         }
 
-        /* Watermark overlay — reduces image to subtle ghost */
+        /* Fullscreen background video */
+        #bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        /* Watermark overlay — reduces video to subtle ghost */
         body::before {
             content: '';
             position: fixed;
@@ -420,6 +428,10 @@
     </style>
 </head>
 <body aria-label="Background: leather-bound vellum tome embossed with 'Truth' on its spine, resting on burlap cloth over a wooden table — the epistemological anchor beneath the framework.">
+
+<video id="bg-video" autoplay muted loop playsinline>
+    <source src="images/PeopleAre.mp4" type="video/mp4">
+</video>
 
 <nav>
     <a href="index.html">Home</a>
