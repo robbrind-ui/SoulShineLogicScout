@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conflict Resolution — Soulshine Logic</title>
+    <meta name="description" content="Conflict resolution for humans and AI. Crisis resources, de-escalation techniques, and how the Soulshine Logic framework handles competing claims.">
+    <meta name="keywords" content="conflict resolution, de-escalation, I statements, crisis resources, AI conflict resolution, Soulshine Logic, Iron Grace Noise">
+    <link rel="icon" type="image/png" href="images/favicon_master_1024.png">
+    <link rel="canonical" href="https://soulshinelogic.com/ConflictResolution.html">
+    <meta property="og:title" content="Conflict Resolution — Soulshine Logic">
+    <meta property="og:description" content="Crisis resources, human de-escalation techniques, and AI conflict resolution under the Iron/Grace/Noise framework.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://soulshinelogic.com/ConflictResolution.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #d4ddd4;
+            --sage-translucent: rgba(212, 221, 212, 0.88);
+            --text-primary: #1a1a1a;
+            --text-secondary: #2d2d2d;
+            --gold: #c8a84e;
+            --link-blue: #2a5da8;
+            --link-hover: #1a3d6e;
+            --btn-bg: #f0ece4;
+            --btn-hover: #e0dbd1;
+            --crisis-red: #8b1a1a;
+            --crisis-bg: rgba(255, 245, 245, 0.92);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 18px;
+            background-color: #c2cfc2;
+            overflow-x: hidden;
+        }
+
+        /* Zoetrope layer — celluloid strip on a spinning cylinder */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: url('images/SL_website_background.jpg');
+            background-repeat: repeat;
+            background-size: 600px 600px;
+            animation: cylinder-spin 90s linear infinite;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        /* Translucent sage wash over the spinning texture */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(194, 207, 194, 0.55);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @keyframes cylinder-spin {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 0.6rem 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        nav a {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--sage);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.6rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        main {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        .text-block {
+            background: var(--sage-translucent);
+            border-radius: 4px;
+            padding: 1.8rem 2.2rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .text-block p {
+            margin-bottom: 1rem;
+        }
+
+        .text-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--link-blue);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+        }
+
+        .image-container {
+            margin-bottom: 1.8rem;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 3px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+        }
+
+        .image-container a {
+            text-decoration: none;
+        }
+
+        /* Page title */
+        .page-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.3rem;
+            color: var(--text-primary);
+        }
+
+        .page-subtitle {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .section-lead {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Crisis resources box */
+        .crisis-box {
+            background: var(--crisis-bg);
+            border: 2px solid var(--crisis-red);
+            border-radius: 4px;
+            padding: 1.8rem 2.2rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .crisis-box .crisis-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--crisis-red);
+            margin-bottom: 0.8rem;
+        }
+
+        .crisis-box p {
+            margin-bottom: 0.6rem;
+        }
+
+        .crisis-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .crisis-box a {
+            color: var(--crisis-red);
+            font-weight: 600;
+        }
+
+        .crisis-box a:hover {
+            color: #5a0f0f;
+        }
+
+        /* Swap pairs */
+        .swap-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .swap-table th {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-align: left;
+            padding: 0.6rem 1rem;
+            border-bottom: 2px solid var(--gold);
+            color: var(--text-secondary);
+        }
+
+        .swap-table td {
+            padding: 0.6rem 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            vertical-align: top;
+        }
+
+        .swap-table .dont {
+            color: var(--crisis-red);
+            text-decoration: line-through;
+            text-decoration-thickness: 1px;
+        }
+
+        .swap-table .do {
+            font-weight: 600;
+        }
+
+        /* Bullet lists */
+        .text-block ul {
+            margin-left: 1.4rem;
+            margin-top: 0.4rem;
+            list-style-type: disc;
+        }
+
+        .text-block ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 0.3rem;
+        }
+
+        /* Dropdown / collapsible */
+        details {
+            background: var(--sage-translucent);
+            border-radius: 4px;
+            padding: 0;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        summary {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            padding: 1.2rem 2.2rem;
+            cursor: pointer;
+            user-select: none;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▸';
+            font-size: 1rem;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .dropdown-content {
+            padding: 0 2.2rem 1.8rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .dropdown-content p {
+            margin-bottom: 1rem;
+        }
+
+        .dropdown-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .sources-content {
+            padding: 0 2.2rem 1.8rem;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .sources-content .source-item {
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .sources-content .source-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .source-title {
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .source-finding {
+            margin-left: 1rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Closing quote */
+        .closing-quote {
+            text-align: center;
+            font-style: italic;
+            padding: 1rem 2rem;
+            font-size: 1.05rem;
+        }
+
+        .closing-quote .attribution {
+            font-style: normal;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .site-footer {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 16px;
+            }
+
+            .text-block, .crisis-box {
+                padding: 1.2rem 1rem;
+            }
+
+            summary {
+                padding: 1rem 1rem;
+            }
+
+            .dropdown-content, .sources-content {
+                padding: 0 1rem 1.2rem;
+            }
+
+            nav {
+                gap: 0.8rem;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+            }
+
+            main {
+                padding: 1rem 0.5rem 2rem;
+            }
+
+            .page-title {
+                font-size: 1.4rem;
+            }
+
+            .swap-table th, .swap-table td {
+                padding: 0.4rem 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="VisualLogicStack.html">Visual Logic Stack</a>
+    <a href="SocraticTeaching.html">Socratic Teaching</a>
+    <a href="ResearchAnchor.html">Research Anchor</a>
+    <a href="ConflictResolution.html">Conflict Resolution</a>
+    <a href="lore.html">Lore</a>
+    <a href="https://forms.gle/ZzrYZiUq96ztaq3y9" target="_blank" rel="noopener">Contact</a>
+</nav>
+
+<main>
+
+    <!-- Hero Image -->
+    <div class="image-container">
+        <img src="images/ConflictResolutionHero.png" 
+             alt="Two-panel comic: Top panel shows two parents arguing with chaotic scribbles of Noise between them. Bottom panel shows their young son standing between them holding a sandwich on a SoulShine Logic plate as high as he can, distressed but brave. The parents pause.">
+    </div>
+
+    <!-- Title -->
+    <div class="text-block" style="text-align: center; padding-bottom: 1rem;">
+        <h1 class="page-title">Conflict Resolution:</h1>
+        <p class="page-subtitle">Sourced Advice for Humans and Machines</p>
+        <p>Conflict is not the enemy. Unresolved conflict is. Whether you are navigating a disagreement with another person or watching an AI produce competing claims, the same principle applies: slow down, classify the problem, and address the structure before the surface.</p>
+    </div>
+
+    <!-- CRISIS RESOURCES — ABOVE THE FOLD -->
+    <div class="crisis-box">
+        <p class="crisis-title">If You or Someone You Know Needs Help Right Now</p>
+        <p><strong>988 Suicide &amp; Crisis Lifeline</strong> — Call or text <a href="tel:988"><strong>988</strong></a> — Available 24/7, free and confidential. <a href="https://988lifeline.org/" target="_blank" rel="noopener">988lifeline.org</a></p>
+        <p><strong>National Domestic Violence Hotline</strong> — Call <a href="tel:18007997233"><strong>1-800-799-7233</strong></a> (SAFE) — Text START to <strong>88788</strong> — Available 24/7 in 200+ languages. <a href="https://www.thehotline.org/" target="_blank" rel="noopener">thehotline.org</a></p>
+        <p><strong>Crisis Text Line</strong> — Text <strong>HOME</strong> to <strong>741741</strong></p>
+        <p><strong>Veterans Crisis Line</strong> — Call <a href="tel:988"><strong>988</strong></a>, then press <strong>1</strong></p>
+        <p style="margin-top: 0.6rem; font-size: 0.92rem;">If you are in immediate danger, call <strong>911</strong>. These resources are staffed by trained counselors. You do not have to navigate this alone.</p>
+    </div>
+
+    <!-- HUMAN CONFLICT RESOLUTION -->
+    <div class="text-block">
+        <p class="section-lead">Human Conflict Resolution: What Actually Works</p>
+        <p>Most of what we say during conflict makes it worse. Not because we are bad people, but because our nervous system is running the show. When emotions spike, the brain's rational thinking center partially goes offline. We stop listening and start defending. The following techniques are backed by research in psychology, de-escalation, and couples therapy. They are simple. They are hard. They work.</p>
+    </div>
+
+    <!-- Rule 1: Don't say calm down -->
+    <div class="text-block">
+        <p class="section-lead">1. Never Say "Calm Down"</p>
+        <p>Few in the history of human emotion have ever calmed down on command. The phrase puts people on the defensive — it implies that their reaction is the problem. And their feelings will elevate and might suck you into an escalating conflict until the problems multiply. Even before you address the cause, you still have to achieve relative calm on both sides to resolve the conflict. Here are some ideas that have proven to work in a significant percentage of psychological studies (see sources below advice).</p>
+        <p><strong>Instead, try:</strong></p>
+        <ul>
+            <li>"Let's take a breath together." — This models calm without commanding it. A longer exhale than inhale sends a physiological calming signal through the nervous system.</li>
+            <li>"I need a moment to process that. Can we pause for a minute?" — This speaks from your own experience and needs rather than accusing the other person of being too emotional.</li>
+            <li>"I can see this is really important to you. Help me understand." — Validation lowers the emotional temperature because it shifts the dynamic from argument to shared effort.</li>
+        </ul>
+    </div>
+
+    <!-- Rule 2: I statements -->
+    <div class="text-block">
+        <p class="section-lead">2. Use "I" Statements, Not "You" Accusations</p>
+        <p>When we feel attacked, we attack back. "You" statements ("you never listen," "you always do this") trigger defensiveness because they assign blame. "I" statements keep the focus on your experience, which is harder to argue with and easier to hear.</p>
+        <table class="swap-table">
+            <thead>
+                <tr>
+                    <th>Instead of this...</th>
+                    <th>Try this</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="dont">"You never help around the house."</td>
+                    <td class="do">"I feel overwhelmed when I'm handling the housework alone."</td>
+                </tr>
+                <tr>
+                    <td class="dont">"You're not listening to me."</td>
+                    <td class="do">"I don't feel heard right now, and that's frustrating."</td>
+                </tr>
+                <tr>
+                    <td class="dont">"You always cancel on me."</td>
+                    <td class="do">"I feel hurt when plans change at the last minute. I look forward to our time together."</td>
+                </tr>
+                <tr>
+                    <td class="dont">"You're wrong."</td>
+                    <td class="do">"When you say X, I feel Y — can we look at this together?"</td>
+                </tr>
+                <tr>
+                    <td class="dont">"You're overreacting."</td>
+                    <td class="do">"Your feelings matter. What's the biggest concern for you?"</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The pattern is: <strong>I feel [emotion] when [specific situation]</strong>. This is not softening or sugarcoating — it is precision. You are describing what happened and what it did to you, which gives the other person something they can actually respond to.</p>
+    </div>
+
+    <!-- Rule 3: Slow down -->
+    <div class="text-block">
+        <p class="section-lead">3. Slow Down — Speed Is the Enemy</p>
+        <p>When emotions are high, everything accelerates: heart rate, thoughts, words. Slowing down is not retreating — it is giving your rational brain time to come back online. Deep, controlled breathing has a measurable physiological calming effect: it lowers heart rate and reduces cortisol.</p>
+        <p><strong>Practical moves:</strong></p>
+        <ul>
+            <li><strong>Take a structured break.</strong> "I want to finish this conversation, but I need ten minutes to think. I'll be back." Then come back.</li>
+            <li><strong>Breathe with purpose.</strong> Inhale for four counts, exhale for six. The longer exhale activates the parasympathetic nervous system. Two or three cycles can shift the tone of an entire conversation.</li>
+            <li><strong>Name the feeling.</strong> "I'm noticing I'm getting frustrated, and I don't want to say something I don't mean." Labeling the emotion reduces its intensity — research calls this "name it to tame it."</li>
+        </ul>
+    </div>
+
+    <!-- Rule 4: Listen to understand -->
+    <div class="text-block">
+        <p class="section-lead">4. Listen to Understand, Not to Reply</p>
+        <p>Most of us spend the other person's speaking time formulating our rebuttal. Active listening means reflecting back what you hear before sharing your own perspective. This does not mean you agree — it means you understood.</p>
+        <p><strong>The formula:</strong> "So what I'm hearing is [their point]. Did I get that right?" Then wait. If they say yes, now you have a shared foundation. If they say no, they will clarify — and you learn something you would have missed.</p>
+        <p>This is the human version of the Soulshine Logic Sourced Anchor: before building, make sure both sides agree on what is actually being said.</p>
+    </div>
+
+    <!-- Rule 5: Repair -->
+    <div class="text-block">
+        <p class="section-lead">5. Repair Matters More Than Prevention</p>
+        <p>Even healthy relationships have conflicts that go off the rails. The difference is the willingness to come back and fix the damage. A repair is not an admission of total defeat — it is recognition that the relationship matters more than being right.</p>
+        <p><strong>After a conflict, ask two questions:</strong></p>
+        <ul>
+            <li>"What is one thing I could have done differently that would have made that conversation easier for you?"</li>
+            <li>"What can we agree to try next time we disagree about something important?"</li>
+        </ul>
+        <p>Every conflict becomes a lesson when you debrief it with honesty instead of resentment.</p>
+    </div>
+
+    <!-- AI CONFLICT RESOLUTION — DROPDOWN IN FRONT OF IMAGE -->
+    <details>
+        <summary>AI Conflict Resolution: How the Framework Handles Competing Claims</summary>
+        <div class="dropdown-content">
+            <p>The image below illustrates how the Soulshine Logic framework resolves conflicts between competing claims, sources, and classification tiers.</p>
+            <p><strong>Center — Iron vs. Iron:</strong> Two armored knights clash, representing two claims that both appear sourced and verified. But the left knight's armor is cracking open to reveal a hollow mannequin underneath — labeled "Demoted Scope." This is what happens when a claim looks like Iron but fails the Verify_Reality gate: the surface is strong, but the substance is empty. The source doesn't hold up. It gets demoted.</p>
+            <p><strong>Right Background — Noise Disguised as Grace:</strong> A spy in tattered Grace robes attempts to cross the field — a claim dressed up to look like valid inference but actually unsupported. A Jedi-like figure wielding a glowing Grace lightsaber Force-throws the impostor backward. The framework doesn't just check Iron. It checks whether Grace is real Grace — traceable to Iron — or Noise wearing a better outfit.</p>
+            <p><strong>Foreground Left — Brain Rot:</strong> A zombie holds a game controller with a severed, sparking cord. The controller represents passive consumption — scrolling, absorbing, not questioning. The cord has been cut. The signal is dead. This is what happens to Noise when the framework is active: it gets unplugged, not fought.</p>
+            <p><strong>Foreground Right — The Mother with Scissors:</strong> She cut the cord. She's not angry. She's holding a plate of cookies. This is the Socratic move: remove the source of Noise, then provide something better. Not punishment — replacement. The scissors are the gate. The cookies are what's on the other side.</p>
+            <p><strong>Bottom Center — The SoulShine Logic Tree:</strong> Roots in truth, branches in structured reasoning. The whole scene plays out under its canopy.</p>
+        </div>
+    </details>
+
+    <!-- Conflict Resolution Image -->
+    <div class="image-container">
+        <img src="images/ConflictResolution.PNG" 
+             alt="Conflict Resolution Protocols: Ironclad knights clash at center with left knight's cracked armor revealing hollow mannequin (Demoted Scope). Background right shows Grace Jedi Force-throwing a disguised Noise spy. Foreground left zombie labeled Brain Rot holds severed controller cord. Foreground right mother with scissors and plate of cookies. SoulShine Logic Tree logo at bottom center.">
+    </div>
+
+    <!-- Sources — DROPDOWN -->
+    <details>
+        <summary>Sources — Human Conflict Resolution</summary>
+        <div class="sources-content">
+
+            <div class="source-item">
+                <p class="source-title">1. <a href="https://www.psychologytoday.com/us/blog/friendship-20/202106/5-more-helpful-things-to-say-than-calm-down" target="_blank" rel="noopener">Bonior (2021)</a> — <em>Psychology Today</em>, "5 More Helpful Things to Say Than 'Calm Down'"</p>
+                <p class="source-finding">"Calm down" puts people on the defensive, implying their reactions are the problem. It gives no actionable road map for recovery. Modeling a pause ("I am going to pause for a moment") is more effective than issuing a command.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">2. <a href="https://www.psychologytoday.com/us/blog/the-wisdom-of-anger/202504/the-ultimate-formula-for-conflict-resolution" target="_blank" rel="noopener">Saad (2025)</a> — <em>Psychology Today</em>, "The Ultimate Formula for Conflict Resolution"</p>
+                <p class="source-finding">When overwhelmed, pause and breathe before responding. Use "I" statements to express your perspective. Avoid personal attacks. Choose a time when all parties are calm and willing to engage. Setting and maintaining healthy boundaries is essential.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">3. <a href="https://www.psychologytoday.com/us/blog/spycatcher/202307/20-tips-for-de-escalating-emotional-situations" target="_blank" rel="noopener">Navarro &amp; Schafer (2023)</a> — <em>Psychology Today</em>, "20 Tips for De-Escalating Emotional Situations"</p>
+                <p class="source-finding">Stay calm to influence nonverbally what others perceive. Lower your tone of voice, relax the shoulders, create spatial distance. Listen carefully to what they say — especially what they say first. Use positive language and look for areas of agreement.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">4. <a href="https://www.psychologytoday.com/us/blog/the-wisdom-of-anger/202401/managing-conflict-resolution-effectively" target="_blank" rel="noopener">Saad (2024)</a> — <em>Psychology Today</em>, "Managing Conflict Resolution Effectively"</p>
+                <p class="source-finding">Focus on the issue rather than the person. "I" statements express your perspective without triggering defensiveness. Assertive communication is based on honesty, respect, and confidence — delivering points that are clear, direct, and kind.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">5. <a href="https://www.law.utah.edu/news-articles/the-power-of-calm-when-dealing-with-conflict/" target="_blank" rel="noopener">Rumore (University of Utah)</a> — "The Power of Calm When Dealing with Conflict"</p>
+                <p class="source-finding">Don't tell people to "calm down" — it feels like a personal attack and often has the opposite effect. Instead, speak from your own experience: "I think I need a moment to process that." Research shows slow, deep, mindful breathing powerfully calms our neurological systems. More thinking keeps the system in hyperdrive; the response needs to be embodied.</p>
+            </div>
+
+            <div class="source-item">
+                <p class="source-title">6. <a href="https://www.mindbody7.com/news/conflict-resolution-strategies-learned-in-therapy/" target="_blank" rel="noopener">Mind Body Seven (2025)</a> — "Conflict Resolution Strategies Learned in Therapy"</p>
+                <p class="source-finding">Slowing down — deep breaths, speaking more slowly, agreeing to take breaks — gives your nervous system a chance to stay calm and your rational brain a chance to stay online. Recognizing when you or your partner are emotionally flooded and need a structured time-out can prevent arguments from spiraling out of control. Active listening means genuinely understanding the other person's perspective before sharing your own.</p>
+            </div>
+
+        </div>
+    </details>
+
+    <!-- Tree Logo -->
+    <div class="image-container">
+        <a href="index.html" title="Return to Soulshine Logic home">
+            <img src="images/SoulShineLogic_Tree_Logo.png" 
+                 alt="Soulshine Logic logo: circuit-board tree with gear nodes, golden roots converging on glowing seed of truth. Click to return to home page."
+                 style="max-width: 400px;">
+        </a>
+    </div>
+
+    <!-- Closing quote -->
+    <div class="text-block closing-quote">
+        <p>"An eye for an eye leaves the whole world blind."</p>
+        <p class="attribution">— attributed to Mahatma Gandhi, paraphrasing his critique of Hammurabi's Code</p>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <p>Soulshine Logic — Iron &amp; Grace — © 2026 Rob Brind</p>
+</footer>
+
+</body>
+</html>
